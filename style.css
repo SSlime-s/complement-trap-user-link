@@ -3,6 +3,6 @@ body {
   color: black;
 }
 
-textarea {
+.text-form {
   resize: none;
 }
