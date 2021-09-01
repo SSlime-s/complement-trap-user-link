@@ -13,6 +13,10 @@ const complementText = (text) => {
   return text.replace(getUserName, '[@$1](https://trap.jp/author/$1/)')
 }
 
+const clearInputForm = () => {
+  document.getElementById("input-form").value = ''
+}
+
 const copyComplementedText = () => {
   const output = document.getElementById("output-form")
   output.select()
