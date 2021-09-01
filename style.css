@@ -6,3 +6,22 @@ body {
 .text-form {
   resize: none;
 }
+
+#forms {
+  display: flex;
+}
+
+.complement-button {
+  margin: 32px 4px auto 4px;
+}
+
+.copy-button,
+.clear-button {
+  height: 32px;
+}
+
+.input-container,
+.output-container {
+  display: flex;
+  flex-direction: column;
+}

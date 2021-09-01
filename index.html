@@ -11,10 +11,15 @@
 <body>
   <h1>タイトル</h1>
   <div id="forms">
-    <button class="clear-button" type="button" onclick="clearInputForm()">クリア</button>
+    <div class="input-container">
+      <button class="clear-button" type="button" onclick="clearInputForm()">クリア</button>
+      <textarea class="text-form" id="input-form" rows="30" placeholder="ここに文章を入力"></textarea>
+    </div>
     <button class="complement-button" type="button" onclick="complement()">変換</button>
-    <textarea class="text-form" id="output-form" rows="30" onfocus="this.select()" readonly></textarea>
-    <button class="copy-button" type="button" onclick="copyComplementedText()">コピー</button>
+    <div class="output-container">
+      <button class="copy-button" type="button" onclick="copyComplementedText()">コピー</button>
+      <textarea class="text-form" id="output-form" rows="30" onfocus="this.select()" readonly></textarea>
+    </div>
   </div>
 </body>
 
