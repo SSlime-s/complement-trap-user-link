@@ -1,3 +1,11 @@
+let isAutoComplement = false
+const onAutoComplementChange = () => {
+  isAutoComplement = document.getElementById("auto-save").checked
+  if (isAutoComplement) {
+    complement()
+  }
+}
+
 const complement = () => {
   const input = document.getElementById("input-form").value
   document.getElementById("output-form").value = complementText(input)
@@ -21,4 +29,10 @@ const copyComplementedText = () => {
   const output = document.getElementById("output-form")
   output.select()
   document.execCommand("copy")
+}
+
+const onInputChange = () => {
+  if (isAutoComplement) {
+    complement()
+  }
 }
