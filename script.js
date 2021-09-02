@@ -25,8 +25,8 @@ const complement = () => {
  * @return {string}
  */
 const complementText = (text) => {
-  const getUserName = /(?<!\[)@([a-zA-Z0-9](?:[a-zA-Z0-9_]*[a-zA-Z0-9])?)/g
-  return text.replace(getUserName, '[@$1](https://trap.jp/author/$1/)')
+  const getUserName = /(?<![\[\\])@([a-zA-Z0-9](?:[a-zA-Z0-9_]*[a-zA-Z0-9])?)/g
+  return text.replace(getUserName, '[@$1](https://trap.jp/author/$1/)').replace(/\\@/g, '@')
 }
 
 const clearInputForm = () => {
