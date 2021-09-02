@@ -31,6 +31,7 @@ const complementText = (text) => {
 
 const clearInputForm = () => {
   document.getElementById("input-form").value = ''
+  onInputChange()
 }
 
 const copyComplementedText = () => {
