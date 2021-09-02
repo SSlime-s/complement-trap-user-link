@@ -3,12 +3,20 @@ const onAutoComplementChange = () => {
   isAutoComplement = document.getElementById("auto-save").checked
   if (isAutoComplement) {
     complement()
+    switchViewComplementButtonTip(false)
   }
+}
+
+const switchViewComplementButtonTip = (value) => {
+  document.getElementById("complement-button-tip").style.display = value ? 'unset' : 'none'
 }
 
 const complement = () => {
   const input = document.getElementById("input-form").value
   document.getElementById("output-form").value = complementText(input)
+  if (!isAutoComplement) {
+    switchViewComplementButtonTip(false)
+  }
 }
 
 /**
@@ -34,5 +42,7 @@ const copyComplementedText = () => {
 const onInputChange = () => {
   if (isAutoComplement) {
     complement()
+  } else {
+    switchViewComplementButtonTip(true)
   }
 }

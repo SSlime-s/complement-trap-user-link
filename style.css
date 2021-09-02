@@ -13,6 +13,17 @@ body {
 
 .complement-button {
   margin: 32px 4px auto 4px;
+  position: relative;
+}
+.complement-button .updated-tip {
+  position: absolute;
+  background-color: orange;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  top: -4px;
+  right: -4px;
+  border: solid white 1px;
 }
 
 .copy-button,
