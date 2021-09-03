@@ -7,6 +7,9 @@ const onAutoComplementChange = () => {
   }
 }
 
+/**
+ * @param {boolean} value
+ */
 const switchViewComplementButtonTip = (value) => {
   document.getElementById("complement-button-tip").style.display = value ? 'unset' : 'none'
 }
